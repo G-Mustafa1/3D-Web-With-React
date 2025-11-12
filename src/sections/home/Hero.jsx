@@ -1,7 +1,6 @@
 import React from "react";
 import ThreeCanvas from "../../components/ThreeCanvas";
 import AnimatedSection from "../../components/AnimatedSection";
-import video from "../../../public/video/hero.mp4";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -19,7 +18,7 @@ function Hero() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-30"
         >
-          <source src={video} type="video/mp4" />
+          <source src="/video/hero.mp4" type="video/mp4" />
         </video>
         <div className="relative z-10 container mx-auto px-6 py-10 md:py-5 grid lg:grid-cols-2 gap-8 items-center">
           <motion.div
