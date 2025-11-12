@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0B0F16;
+  --card: #0F1720;
+  --primary: #1E90FF;
+  --accent: #00BFA6;
+  --text: #E6EEF8;
+  --muted: #9AA7B2;
+  --border-color: rgba(255, 255, 255, 0.03);
+  --box-shadow: rgba(111, 105, 105, 0.35);
+}
+
+html,
+body,
+#root {
+  height: 100%
+}
+
+body {
+  @apply antialiased;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  /* transition: transform .35s ease, box-shadow .35s ease; */
+  /* transition: 1.0s; */
+  box-shadow: rgba(111, 105, 105, 0.35) 0px 5px 15px;
+}
+
+.section-card:hover {
+  /* transform: translateY(-6px);
+  transform: scale(1.02);
+  transition: 1.01s; */
+  /* transition: 1.s; */
+  background-color: #0B0F16;
+  color: #fff;
+  /* background-color: #000; */
+  /* color: #009dff; */
+  /* box-shadow: #00BFA6; */
+  box-shadow: 0px 5px 10px #00BFA6;
+  /* box-shadow: #00BFA6 0px 1px 1px; */
+  /* box-shadow: #00BFA6 0px 3px 8px; */
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: .6rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform .28s cubic-bezier(.2, .9, .2, 1), box-shadow .28s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(30, 144, 255, 0.12);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  padding: .6rem 1rem;
+  border-radius: 10px;
+  transition: background .25s, transform .25s;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateY(-3px);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.will-change-transform {
+  will-change: transform, opacity;
+}
